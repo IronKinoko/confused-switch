@@ -24,12 +24,12 @@ function createStage() {
 
   const btnGroup = document.createElement('div')
   const replayBtn = document.createElement('button')
-  replayBtn.innerText = 'replay'
+  replayBtn.innerText = '播放历史操作'
   replayBtn.onclick = replay
   btnGroup.appendChild(replayBtn)
 
   const resetBtn = document.createElement('button')
-  resetBtn.innerText = 'reset'
+  resetBtn.innerText = '重置'
   resetBtn.onclick = reset
   btnGroup.appendChild(resetBtn)
   document.body.appendChild(btnGroup)
@@ -78,6 +78,6 @@ function replay() {
   for (let i = 0; i < newRecords.length; i++) {
     setTimeout(() => {
       switchItem(newRecords[i])
-    }, (i + 1) * 1000)
+    }, (i + 1) * 700)
   }
 }
